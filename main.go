@@ -77,7 +77,6 @@ func main() {
 		select {
 		case m := <-receivedMsg:
 			fmt.Println(m)
-		default:
 		}
 	}
 }
