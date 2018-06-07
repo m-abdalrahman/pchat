@@ -10,6 +10,8 @@ var (
 	Username string
 	// PrivateKey ...
 	PrivateKey string
+	// URL RPC url
+	URL string
 )
 
 // CheckArgs ...

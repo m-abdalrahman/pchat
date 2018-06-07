@@ -15,13 +15,14 @@ func init() {
 	//flags
 	flag.StringVar(&Username, "username", "", "set username, example 'pchat -username \"user\"'")
 	flag.StringVar(&PrivateKey, "privatekey", "", "set your private key")
+	flag.StringVar(&URL, "url", "http://localhost:8545", "set RPC URL for running whisper node")
 }
 
 func main() {
 	flag.Parse()
 	CheckArgs()
 
-	ctx, c, id := Wconfig()
+	ctx, c, id := Wconfig(URL, PrivateKey)
 	fID := Receive(ctx, c, id)
 
 	var pubKey, msg string

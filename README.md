@@ -2,7 +2,8 @@
 
 ## Running the example
 
-The example assumes that there is a running Whisper v6 node exposing an RPC interface at URL `http://localhost:8545`. For this, you can use `geth` with the folloing parameters:
+The example assumes that there is a running Whisper v6 node. 
+example for this, use `geth` with the folloing parameters to exposing an RPC interface at URL http://localhost:8545:
 
     $ geth <usual p2p flags> --shh --rpc
 
@@ -30,6 +31,7 @@ mandatory argument:
      -username                     set your username
 
 optional arguments:
+     -url                          set RPC URL for running Whisper v6 node default "http://localhost:8545"
      -privatekey                   set your private key
 
 ```

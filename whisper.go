@@ -10,19 +10,19 @@ import (
 )
 
 // Wconfig it will retrun context, client configuration, and id
-func Wconfig() (ctx context.Context, c *shh.Client, id string) {
+func Wconfig(url, privatekey string) (ctx context.Context, c *shh.Client, id string) {
 	ctx = context.TODO()
 
-	c, err := shh.Dial("http://127.0.0.1:8545")
+	c, err := shh.Dial(url)
 	if err != nil {
 		log.Println(err)
 	}
 
 	// if private key set
-	if PrivateKey == "" {
+	if privatekey == "" {
 		id, _ = c.NewKeyPair(ctx)
 	} else {
-		prKey, _ := hexutil.Decode(PrivateKey)
+		prKey, _ := hexutil.Decode(privatekey)
 		id, err = c.AddPrivateKey(ctx, prKey)
 		if err != nil {
 			log.Fatalln(err)
