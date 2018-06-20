@@ -21,7 +21,7 @@ download your version from [here](https://github.com/mabdalrahman/pchat/releases
 `pchat` requires Go 1.10.2 or later, [dep](https://github.com/golang/dep) to managing dependency package and [xgo](https://github.com/karalabe/xgo) for cross compile.
 
 ```
-$ go get -u github.com/mabdalrahman/pchat
+$ go get -u github.com/m-abdalrahman/pchat
 ```
 
 ## Usage
